@@ -31,6 +31,7 @@ Router.prototype = {
     },
     hasChanged: function(scope, routes) {
         const routeFound = window.location.hash.length > 0;
+
         if (routeFound) {
             routes.forEach(
                 route =>
@@ -56,14 +57,17 @@ Router.prototype = {
     },
     navMenu: function() {
         const navElem = document.querySelector('nav');
-        const navTempl = document.querySelector('nav>template').textContent;
+        const navTempl = document.querySelector('nav>template');
+        const dataRefs = navTempl.innerHTML.match(/(?:\$\{)([^}]+)(?:\})/g);
         this.routes
             .filter(route => route.purpose === 'nav')
             .forEach(
                 navRoute =>
-                (navElem.innerHTML += `<a href="#${navRoute.name}">${
-            navRoute.name
-          }</a>`)
+                (navElem.innerHTML += dataRefs.reduce(
+                    (link, field) =>
+                    link.replace(field, navRoute[field.replace(/[\$\{}]/g, '')]),
+                    navTempl.innerHTML.trim()
+                ))
             );
     },
     resolveViews: function(domTargets) {

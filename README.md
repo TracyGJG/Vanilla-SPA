@@ -7,6 +7,7 @@ Inspired by the [article by Santiago García da Rosa](https://medium.com/fronten
 Variations from the orginal project include:
 
 - Default route identified outside of the array of routes.
+- Exceptions raised with Error objects instead of simple strings.
 - Semantic markup employed using an adaptive application layout.
 - Fetch API employed to retrieve vaiews in place of XHR.
 - Views/Routes include navigable (menu driven) panels as well as named areas (aside).
@@ -14,7 +15,4 @@ Variations from the orginal project include:
 - Vanilla CSS used to apply layout and colour scheme, using custom properties.
 - Dynamic sizing of an 'aside' panel.
 - Use JS (ES) modules for the JavaScript files.
-
-### Changes Planned
-
 - Template used to generate navigation entries.
