@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Single Page Application</title>
+    <link rel="stylesheet" href="css/colour-scheme.css" />
+    <link rel="stylesheet" href="css/screen-layout.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Single Page Application</h1>
+    </header>
+    <nav>
+        <template>
+        <a href="#${name}">${name}</a>
+      </template>
+    </nav>
+    <main></main>
+    <footer>
+        Inspired by the
+        <a href="https://medium.com/frontend-fun/js-vanilla-script-spa-1b29b43ea475">article by Santiago García da Rosa</a
+      >
+    </footer>
+    <aside>
+      <article>
+        <h2>Aside</h2>
+        <section data-view="aside">TEMP</section>
+      </article>
+    </aside>
+
+    <script src="js/route.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

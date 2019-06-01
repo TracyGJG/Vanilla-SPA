@@ -1,0 +1,29 @@
+header {
+    background-color: #fbb;
+}
+
+nav {
+    background-color: #ffb;
+}
+
+main {
+    background-color: #bfb;
+}
+
+aside {
+    background-color: #bff;
+}
+
+footer {
+    background-color: #bbf;
+}
+
+article {
+    /* background-color: #fbf; */
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+section {
+    border: 1px solid #000;
+    background-color: #fff;
+}

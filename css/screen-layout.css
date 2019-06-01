@@ -1,0 +1,106 @@
+html {
+    --header-height: 80px;
+    --nav-width: 160px;
+    --aside-min-width: 8px;
+    --aside-max-width: 480px;
+    --footer-height: 32px;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body,
+body>* {
+    overflow: hidden;
+}
+
+body>*,
+article {
+    position: absolute;
+}
+
+header,
+footer,
+article {
+    left: 0;
+    right: 0;
+}
+
+article {
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+section {
+    width: 400px;
+    height: 200%;
+    margin: 1em;
+    position: relative;
+}
+
+header {
+    top: 0;
+    height: var(--header-height);
+    padding-left: 1.5em;
+}
+
+footer {
+    bottom: 0;
+    height: var(--footer-height);
+    padding: 0.5em 0 0 0.5em;
+}
+
+nav {
+    left: 0;
+    width: var(--nav-width);
+    top: var(--header-height);
+    bottom: var(--footer-height);
+}
+
+nav>a {
+    width: 100%;
+    display: inline-block;
+    padding: 0.5em;
+}
+
+main,
+aside {
+    right: 0;
+    top: var(--header-height);
+    bottom: 0;
+}
+
+main {
+    left: var(--nav-width);
+    right: var(--aside-min-width);
+}
+
+aside {
+    width: var(--aside-min-width);
+    cursor: pointer;
+    transition: width 1s;
+    transition-delay: 0.5s;
+}
+
+aside:hover {
+    width: var(--aside-max-width);
+}
+
+aside>article {
+    right: 0;
+    left: unset;
+    width: 0;
+    cursor: default;
+    transition: width 1s;
+    transition-delay: 0.5s;
+}
+
+aside:hover>article {
+    width: calc(var(--aside-max-width) - var(--aside-min-width));
+}
