@@ -13,8 +13,8 @@ Variations from the orginal project include:
 - Navigation/Menu generated from selected routes.
 - Vanilla CSS used to apply layout and colour scheme, using custom properties.
 - Dynamic sizing of an 'aside' panel.
+- Use JS (ES) modules for the JavaScript files.
 
 ### Changes Planned
 
 - Template used to generate navigation entries.
-- Use JS (ES) modules for the JavaScript files.

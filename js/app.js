@@ -1,6 +1,8 @@
-'use strict';
+import { Router } from './router.js';
+import { Route } from './route.js';
 
 {
+    ('use strict');
     new Router(
         [
             new Route('About', 'about.html'),
