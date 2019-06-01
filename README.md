@@ -16,3 +16,7 @@ Variations from the orginal project include:
 - Dynamic sizing of an 'aside' panel.
 - Use JS (ES) modules for the JavaScript files.
 - Template used to generate navigation entries.
+
+## Screen Shot
+
+![Screen shot](screen-shot.png 'SPA Screen Shot')
